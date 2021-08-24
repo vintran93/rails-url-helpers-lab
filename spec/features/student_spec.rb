@@ -69,11 +69,6 @@ describe 'Activate page' do
     @student.reload
     expect(@student.active).to eq(false)
   end
-
-  it "Should redirect to the student show page" do
-    visit activate_student_path(@student)
-    expect(page.current_path).to eq(student_path(@student))
-  end
 end
 
 describe 'linking from the index page to the show page' do
